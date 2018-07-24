@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HQInlineListView"
   s.version      = "0.0.1"
-  s.summary      = "A short description of HQInlineListView."
+  s.summary      = "轻量级通用购物App商品详情页面"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+  基于UITableView和UICollectionView封装的支持纵向、横向多segment滚动的视图控件，轻量级通用购物App商品详情页面，可以完全自定义Segement数量和内容。
                    DESC
 
-  s.homepage     = "http://EXAMPLE/HQInlineListView"
+  s.homepage     = "https://github.com/debolee/HQInlineListView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -52,10 +53,10 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "debolee" => "debolee@qq.com" }
+  s.author             = { "debolee" => "debolee@163.com" }
   # Or just: s.author    = "debolee"
-  # s.authors            = { "debolee" => "debolee@qq.com" }
-  # s.social_media_url   = "http://twitter.com/debolee"
+  # s.authors            = { "debolee" => "debolee@163.com" }
+  s.social_media_url   = "https://weibo.com/bobooo"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -64,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -78,8 +79,7 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-
-  s.source       = { :git => "http://EXAMPLE/HQInlineListView.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/debolee/HQInlineListView.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +90,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "HQInlineListView", "HQInlineListView/**/*.{h,m,mm}"
+  #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -104,7 +104,8 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  # s.resource  = "icon.png"
+  s.resources = "HQInlineListView/*.xib"
+  
   # s.resources = "Resources/*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
@@ -129,7 +130,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
